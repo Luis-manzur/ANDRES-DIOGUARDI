@@ -1,0 +1,20 @@
+{% extends "admin_base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <form method="post" action="{{  url_for('add_item') }}" class="items-form">
+        <h2>Añadir Item</h2>
+        <input class="big" type="text" name="name" placeholder="Name *" id="name">
+        <input type="text" class="big" name="dimentions" placeholder="Dimenciones *" id="dimentions">
+        <textarea name="description" class="big" id="description" placeholder="Descripcion *"></textarea>
+        <h3>Fotos</h3>
+        <input type="text" class="big" name="first_photo" placeholder="First photo name *" id="first_photo">
+        <input type="text" class="big" name="second_photo" placeholder="Second photo name *" id="second_photo">
+        <input type="text" class="big" name="third_photo" placeholder="Third photo name *" id="third_photo">
+        <input type="text" class="big" name="fourth_photo" placeholder="Fourth photo name *" id="fourth_photo">
+        <input type="submit" value="Agregar" class="buttom">
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "admin_base.html" %}
+
+{% block content %}
+<div class="container">
+    <form method="post" action="{{  url_for('admin_login') }}">
+        <h2>Iniciar Sesion</h2>
+            <input type="email" class="big" name="email" id="email" placeholder="Email *" required>
+            <input type="password" class="big" name="password" id="password" placeholder="Contraseña *" required>
+            <input type="submit" value="Entrar" class="buttom"> 
+    </form>
+</div>
+{% endblock %}

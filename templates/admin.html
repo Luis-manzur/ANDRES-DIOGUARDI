@@ -1,0 +1,21 @@
+{% extends "admin_base.html" %}
+
+{% block content %}
+    <div class="container">
+        <table>
+            <tr>
+                <th id="name">Name</th>
+                <th id="option">Options</th>
+            </tr>
+            {% for item in items %}
+            <tr>
+                <td>{{item.name}}</td>
+                <td id="options"><a href="/edit/{{item.id}}">Editar</a>  <a href="/delete/{{item.id}}">Borrar</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a href="/admin/add">Agregar</a>
+
+    </div>
+{% endblock %}

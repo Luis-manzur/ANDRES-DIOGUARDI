@@ -1,0 +1,23 @@
+{% extends "admin_base.html" %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="../static/css/admin.css">
+</head>
+
+<div class="container">
+    <form  method="post" action="" class="items-form">
+        <h2>Editar Item</h2>
+        <input class="big" type="text" name="name" placeholder="Name *" id="name" value="{{item.name}}">
+        <input type="text" class="big" name="dimentions" placeholder="Dimenciones *" id="dimentions" value="{{item.dimentions}}">
+        <textarea name="description" class="big" id="description" placeholder="Descripcion *" >{{item.description}}</textarea>
+        <h3>Fotos</h3>
+        <input type="text" class="big" name="first_photo" placeholder="First photo name *" id="first_photo" value="{{item.primary_photo}}">
+        <input type="text" class="big" name="second_photo" placeholder="Second photo name *" id="second_photo" value="{{item.secondary_photo_one}}">
+        <input type="text" class="big" name="third_photo" placeholder="Third photo name *" id="third_photo" value="{{item.secondary_photo_two}}">
+        <input type="text" class="big" name="fourth_photo" placeholder="Fourth photo name *" id="fourth_photo" value="{{item.secondary_photo_three}}">
+        <input type="submit" value="Guardar" class="buttom">
+    </form>
+</div>
+
+{% endblock %}

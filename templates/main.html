@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <title>Andres Dioguardi Design</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <label class="logo">Andres Dioguardi</label>
+            <ul class="menu-items" id="menu-items">
+                <li class="active" id="start-item"><a href="#start" >Inicio</a></li>
+                <li><a href="#catalog" id="item">Catalogo</a></li>
+                <li><a href="#contact" id="item">Contacto</a></li>
+            </ul>
+            <span class="btn-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </span>
+        </nav>
+    </header>
+    <div class="container-start" id="start">
+        <h1>ANDRES DIOGUARDI DESIGN</h1>
+    </div>
+    <div class="container-catalog" id="catalog">
+        <div class="cards-container">
+            {% for item in items %}
+            <div class="card">
+                <div class="card-content">
+                    <p class="card-title">{{item.name}}</p>
+                    <p class="card-description">Descripcion:</p> 
+                    <p class="description">{{item.description}}</p>
+                </div>
+                <a href="/item/{{item.id}}"><img src="../static/img/{{item.primary_photo}}"></a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="container-catalog-title">
+            <h1>CATALOGO</h1>
+        </div>
+    </div>
+        
+    </div>
+    <div class="container-form" id="contact">
+        <form id="contact-form">
+            <h1>Contactanos</h1>
+            <input type="text" name="name" id="name" placeholder="Nombre *">
+            <input type="text" name="email" id="email" placeholder="Correo *">
+            <input type="text" name="number" id="number" placeholder="Telefono *">
+            <textarea name="message" id="message" placeholder="Mensaje *"></textarea>
+            <input type="submit" value="Enviar" class="buttom">
+        </form>
+    </div>
+    
+    <script src="../static/js/main.js" defer></script>
+</body>
+
+</html>
+
