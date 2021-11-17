@@ -17,7 +17,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = dbdir
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
-app.secret_key = os.environ.get('SECRET_KEY')
+app.secret_key = "1234567"
 
 class Item(db.Model):
     id = db.Column(db.Integer, primary_key=True)
